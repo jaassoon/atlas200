@@ -1,13 +1,13 @@
 FROM ubuntu:xenial
 ARG DEBIAN_FRONTEND=noninteractive
 COPY basic_pkg.sh /build/
-RUN chmod -v +x /build/basic_pkg.sh && bash /build/basic_pkg.sh
+RUN bash /build/basic_pkg.sh
 
 COPY add_user.sh /build/
-RUN chmod -v +x /build/add_user.sh && bash /build/add_user.sh
+RUN bash /build/add_user.sh
 
 COPY atlas_pkg.sh /build/
-RUN chmod -v +x /build/atlas_pkg.sh && bash /build/atlas_pkg.sh
+RUN bash /build/atlas_pkg.sh
 
 USER huawei
 RUN mkdir /home/huawei/director
