@@ -6,9 +6,9 @@ docker for atlas200 studio server
 * You should run the last commented line in Dockerfile by yourself, because there is an error when running in docker build.
 Well if you work it out please tell me why （╹◡╹）.
 ## how to build 
-```docker build . -t atlas-studio-img```
+```sudo docker build . -t atlas-studio-img```
 ### run image
-```docker run --name atlas-studio-vm -p 8888:8888 -p 8099:8099 -it atlas-studio-img```
+```sudo docker run --name atlas-studio-vm -p 8888:8888 -p 8099:8099 -it atlas-studio-img```
 ### install studio server
 ```./install.sh```
 ### test
