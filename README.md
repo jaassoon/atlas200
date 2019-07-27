@@ -8,7 +8,7 @@ Well if you work it out please tell me why （╹◡╹）.
 ## how to build 
 ```sudo docker build . -t atlas-studio-img```
 ### run image
-```sudo docker run --name atlas-studio-vm -p 8888:8888 -p 8099:8099 -it atlas-studio-img```
+```sudo docker run --name atlas-studio-vm --net=host -it atlas-studio-img```
 ### install studio server
 ```./install.sh```
 ### test
