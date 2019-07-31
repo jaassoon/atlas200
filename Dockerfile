@@ -24,7 +24,9 @@ ENV PATH=$JAVA_HOME/bin:$PATH
 RUN pip install setuptools
 USER root
 RUN wget https://raw.githubusercontent.com/Ascend/tools/master/make_ui_cross_env.py &&\
-    pip3 install pexpect
+    pip3 install pexpect setuptools
 USER huawei
 RUN git clone https://github.com/Ascend/sample-facialrecognition.git
+RUN export DDK_HOME=/home/$(whoami)/tools/che/ddk/ddk >> ~/.bashrc && source ~/.bashrc
+RUN export LD_LIBRARY_PATH=$DDK_HOME/uihost/lib >> ~/.bashrc && source ~/.bashrc
 #RUN ./install.sh
