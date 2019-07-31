@@ -22,4 +22,9 @@ USER huawei
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$PATH
 RUN pip install setuptools
+USER root
+RUN wget https://raw.githubusercontent.com/Ascend/tools/master/make_ui_cross_env.py &&\
+    pip3 install pexpect
+USER huawei
+RUN git clone https://github.com/Ascend/sample-facialrecognition.git
 #RUN ./install.sh
