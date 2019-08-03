@@ -27,6 +27,6 @@ RUN wget https://raw.githubusercontent.com/Ascend/tools/master/make_ui_cross_env
     pip3 install pexpect setuptools
 USER huawei
 RUN git clone https://github.com/Ascend/sample-facialrecognition.git
-RUN export DDK_HOME=/home/$(whoami)/tools/che/ddk/ddk >> ~/.bashrc && source ~/.bashrc
-RUN export LD_LIBRARY_PATH=$DDK_HOME/uihost/lib >> ~/.bashrc && source ~/.bashrc
+ENV DDK_HOME=/home/$(whoami)/tools/che/ddk/ddk
+ENV LD_LIBRARY_PATH=$DDK_HOME/uihost/lib
 #RUN ./install.sh
