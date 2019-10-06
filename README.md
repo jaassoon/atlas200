@@ -17,7 +17,7 @@ bash run copy_ovpn.sh
 ```
 ```
 <!-- in your container -->
-sudo openvpn --config myClient.ovpn
+sudo openvpn --config /opt/myClient.ovpn
 <!-- in your container and in new terminal -->
 sudo route add -net 192.168.0.2 netmask 255.255.255.255 gw $(ifconfig |grep P-t-P|cut -d: -f3|cut -d' ' -f1)
 export studioIP=$(ifconfig |grep P-t-P|cut -d: -f2|cut -d' ' -f1)
