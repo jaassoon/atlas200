@@ -11,8 +11,10 @@ Or download by command as below:
 ### run image
 ```sudo docker run -p 8888:8888 -p 8099:8099 --name atlas-studio-vm --privileged -it atlas-studio-img```
 ### openvpn config
+```
 <!-- in your host machine -->
-```bash run copy_ovpn.sh```
+bash run copy_ovpn.sh
+```
 ```
 <!-- in your container -->
 sudo openvpn --config myClient.ovpn
@@ -26,5 +28,6 @@ echo studioIP is ${studioIP}
 ### test
 ```shell
 curl localhost:8888
-curl localhost:8099
+<!-- in your host machine -->
+https://${studioIP}:8888
 ```
