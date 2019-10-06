@@ -29,4 +29,8 @@ USER huawei
 RUN git clone https://github.com/Ascend/sample-facialrecognition.git
 ENV DDK_HOME=/home/$(whoami)/tools/che/ddk/ddk
 ENV LD_LIBRARY_PATH=$DDK_HOME/uihost/lib
-#RUN ./install.sh
+EXPOSE 8888
+EXPOSE 8099
+USER root
+RUN apt-get update; apt-get install -y pptp-linux openvpn
+USER huawei

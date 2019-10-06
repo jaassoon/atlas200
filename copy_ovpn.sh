@@ -1,0 +1,1 @@
+docker cp YOUR_CLIENT_CONFIG.ovpn atlas-studio-vm:/opt/myClient.ovpn
